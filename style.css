@@ -1,0 +1,167 @@
+/* Общо за страницата */
+body {
+    font-family: 'Cinzel', serif;
+    background-color: #66201a;
+    color: white;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Хедър изображение */
+header img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Навигация */
+nav {
+    background-color: #5d4037; /* Тъмно кафяв фон */
+    padding: 15px 0;
+    text-align: center;
+    line-height: 1.6;
+    border: 3px solid #c9a15c; /* Златист бордюр */
+    border-radius: 20px; /* Закръглени ъгли */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Дълбока сянка за изпъкване */
+    max-width: 80%; /* По-стеснен контейнер */
+    margin: 20px auto; /* Центрираме с отстояние отгоре и отдолу */
+}
+
+/* Бутоните вътре в навигацията */
+nav button {
+    background: rgba(0, 0, 0, 0.3); /* Полупрозрачен тъмен фон */
+    border: 2px solid #c9a15c; /* Лека златиста рамка */
+    color: white;
+    font-size: 28px; /* Малко по-голям текст за заглавие */
+    font-family: 'Old English Text MT', fantasy;
+    padding: 10px 20px;
+    border-radius: 15px; /* Закръглени ъгли на бутоните */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Лека сянка за дълбочина */
+    transition: all 0.3s ease; /* Плавна анимация при ховър */
+}
+
+/* Ховър ефект за бутоните */
+nav button:hover {
+    background-color: #ffcc80; /* Светло златист фон */
+    color: black; /* Контрастен текст */
+    transform: scale(1.1); /* Леко уголемяване при ховър */
+}
+/* Основен контейнер */
+main {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Разстояние между текста и снимките */
+    padding: 50px;
+    max-width: 1500px; /* Позволяваме повече ширина */
+    margin: 0 auto;
+}
+
+/* Контейнер за снимките */
+.side-images {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+/* Стил на снимките */
+.side-images img {
+    width: 100%; /* Ширина на изображението според родителския контейнер */
+    max-width: 500px; /* Ограничаваме максималната ширина на изображението */
+    height: auto;
+    border: 3px solid #c9a15c; /* Златиста рамка около изображението */
+    border-radius: 10px; /* Закръглени ъгли за по-елегантен вид */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Лека сянка за дълбочина */
+    transition: all 0.3s ease; /* Плавно преминаване между ефектите */
+}
+
+/* Ховър ефект за снимките */
+.side-images img:hover {
+    transform: scale(1.05); /* Леко уголемяване при ховър */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Засилена сянка при ховър */
+}
+
+/* Контейнер за бутони */
+footer {
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Бутоните за страници */
+.pagination span {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #795548;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Активен бутон */
+.pagination .active {
+    background-color: #ffcc80;
+    color: black;
+}
+
+/* Първа буква на абзаца */
+article p::first-letter {
+    font-size: 3em;
+    font-family: 'MedievalSharp', cursive;
+    font-weight: bold;
+    color: #c9a15c;
+    float: left;
+    margin-right: 20px;
+}
+
+/* Заглавия */
+article h1, article h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Абзаци */
+article p {
+    flex: 1; /* Изпълва наличното пространство */
+    max-width: 1300px; /* Достатъчно широк текст */
+    margin: 0 auto;
+    padding: 30px 50px;
+    text-align: justify;
+    margin-bottom: 50px;
+    font-size: 25px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Текст под снимките */
+.side-images p {
+    font-size: 26px;
+    color: rgb(193, 90, 34);
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px; /* Отстояние вътре в рамката */
+    border: 2px solid #c9a15c; /* Златист бордюр */
+    border-radius: 15px; /* Закръглени ъгли */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачен тъмен фон */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Лека сянка за дълбочина */
+    width: 80%; /* Да не е прекалено широк текстът */
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Cinzel', serif; /* Средновековен стил */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
